@@ -18,6 +18,8 @@ export class AppointmentListComponent  implements OnInit{
   ngOnInit(): void {
     let savedAppointment=localStorage.getItem("appointments");
     this.appointments=savedAppointment?JSON.parse(savedAppointment):[]
+    //Retreiving if there are any appointments stored in local memory
+
     this.id=savedAppointment?this.appointments[this.appointments.length-1].id+1 : 0
   }
 
@@ -33,6 +35,7 @@ export class AppointmentListComponent  implements OnInit{
 
       this.appointments.push(newAppointment)
       localStorage.setItem("appointments", JSON.stringify(this.appointments))
+      //creating key value pair for appointments array 
 
 
      
@@ -48,6 +51,8 @@ export class AppointmentListComponent  implements OnInit{
   deleteAppointment(index:number):void{
     this.appointments.splice(index,1);
     localStorage.setItem("appointments", JSON.stringify(this.appointments))
+          //creating key value pair for appointments array 
+
 
   }
 }
