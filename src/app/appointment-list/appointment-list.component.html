@@ -4,7 +4,8 @@
     <button (click)="addAppointment()">Add</button>
 </div>
 <ul>
-    <li *ngFor="let appointment of appointments">
-        {{appointment.id}} |  {{appointment.title}} | {{appointment.date | date:'dd.MM.yyy'}}
+    <li *ngFor="let appointment of appointments; index as i">
+        {{appointment.id}} |  {{appointment.title}} | {{appointment.date | date:'dd.MM.yyy'}} <!--Normal one way data binding-->
+        <button (click)="deleteAppointment(i)">Delete</button> <!--Click event handler for deleteting appointments-->
     </li>
 </ul>
