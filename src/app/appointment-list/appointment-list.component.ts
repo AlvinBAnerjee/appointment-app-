@@ -25,9 +25,13 @@ export class AppointmentListComponent {
 
       this.appointments.push(newAppointment)
 
-      this.newAppointmentTitle = "";
-      this.newAppointmentDate = new Date();
+     
     }
+    else{
+      alert("Invalid Input");
+    }
+    this.newAppointmentTitle = "";
+    this.newAppointmentDate = new Date();
 
   }
 }
