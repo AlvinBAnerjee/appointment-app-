@@ -8,7 +8,7 @@ import { title } from 'process';
   styleUrl: './appointment-list.component.css'
 })
 export class AppointmentListComponent {
-  newAppointmentTitle:string="0";
+  newAppointmentTitle:string="";
   newAppointmentDate: Date=new Date();
   appointments: Appointment[]=[];
   id:number=this.appointments.length;
